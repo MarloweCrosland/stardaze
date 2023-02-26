@@ -16,9 +16,12 @@ const getPhoto = () => {
 const displayImage = (data) => {
   let htmlTemplate = `<img src=${data.hdurl}>`;
   const imageContainer = document.getElementById("star-photo");
-  const imageCaption = document.getElementById("about-text");
+  const imageCaption = document.getElementById("caption");
   imageContainer.innerHTML = htmlTemplate;
-    imageCaption.innerHTML = data.title;
+    imageCaption.innerHTML = data.title
+
+    const imageText = document.getElementById('about-text');
+    imageText.innerHTML = data.explanation
 };
 
 getPhoto();
