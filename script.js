@@ -15,10 +15,10 @@ const getPhoto = () => {
 
 const displayImage = (data) => {
   let htmlTemplate = `<img src=${data.hdurl}>`;
-
   const imageContainer = document.getElementById("star-photo");
-
+  const imageCaption = document.getElementById("about-text");
   imageContainer.innerHTML = htmlTemplate;
+    imageCaption.innerHTML = data.title;
 };
 
 getPhoto();
